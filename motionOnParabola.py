@@ -10,7 +10,8 @@ m = 0.1
 g = 9.81
 
 # concavity of parabola y = c x^2 / 2
-c = 0.00002
+c = 2.0
+
 # normal force exerted by parabola
 def normalForce(x, vx):
 	return (m * g + m * c * vx**2) / (1 + c**2 * x**2)
@@ -85,5 +86,6 @@ T_arr = 0.5 * m * v_arr**2
 U_arr = m * g * y_arr
 E_arr = T_arr + U_arr
 
+# plot 
 plt.plot(N_arr, y_arr[:-1])
 plt.show()
