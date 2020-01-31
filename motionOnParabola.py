@@ -12,20 +12,24 @@ g = 9.81
 # concavity of parabola y = c x^2 / 2
 c = 2.0
 
+
 # normal force exerted by parabola
-def normalForce(x, vx):
-	return (m * g + m * c * vx**2) / (1 + c**2 * x**2)
-	
+def normalForce(x, y, vx, vy):
+	return m * (g + c * vx**2) / (1 + c**2 * x**2)
+
+
+# define accelerations
+def acc_x(x, y, vx, vy, Fn):
+	return -c * Fn * x / m
+
+
+def acc_y(x, y, vx, vy, Fn):
+	return Fn / m - g
+
+
 # initial conditions
 y0 = 1
 x0 = np.sqrt(2 * y0 / c)
-
-# temporal resolution (sec)
-dt = 1e-3
-
-# initial conditions
-y0 = c
-x0 = 0
 
 # temporal resolution (sec)
 dt = 1e-4
