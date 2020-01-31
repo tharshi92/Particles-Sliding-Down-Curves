@@ -23,7 +23,6 @@ def acc_x(x, y, vx, vy, Fn):
 def acc_y(x, y, vx, vy, Fn):
 	return Fn / m - g
 
-
 # initial conditions
 y0 = c
 x0 = 0
@@ -93,6 +92,5 @@ T_arr = 0.5 * m * v_arr**2
 U_arr = m * g * y_arr
 E_arr = T_arr + U_arr
 
-plt.plot(t_arr, N_arr)
+plt.plot(theta_arr, y_arr)
 plt.show()
-
