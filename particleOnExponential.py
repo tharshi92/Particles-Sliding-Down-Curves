@@ -92,5 +92,5 @@ T_arr = 0.5 * m * v_arr**2
 U_arr = m * g * y_arr
 E_arr = T_arr + U_arr
 
-plt.plot(theta_arr, y_arr)
+plt.plot(N_arr, y_arr)
 plt.show()
